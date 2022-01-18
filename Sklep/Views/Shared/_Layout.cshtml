@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["HealthyDay"]</title>
+    <link rel="stylesheet" href="/css/LayoutStyle.css" />
+    <link rel="stylesheet" href="/css/HeaderLayout.css" />
+    <link rel="stylesheet" href="/css/ButtonsStyle.css" />
+    <link rel="stylesheet" href="/css/FormStyle.css" />
+</head>
+<body>
+    <header>
+        <div class="left-header">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Index">HealthyDay</a>
+            </div>
+            <div class="lnav-elements">
+                <a>Produkty</a>
+            </div>
+            <div class="lnav-elements">
+                <a>Panel zarządzania</a>
+            </div>
+        </div>
+        <div class="right-header">
+            <div class="rnav-elements">
+                <a asp-controller="Account" asp-action="Login">Login</a>
+            </div>
+            <div class="rnav-elements">
+                <a asp-controller="Account" asp-action="Register">Rejestracja</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <div class="footer-elements">
+            <p>Sklep 2022</p>
+        </div>
+    </footer>
+</body>
+</html>

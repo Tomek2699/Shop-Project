@@ -1,0 +1,55 @@
+﻿/* Login and register form style */
+.account-form {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+}
+
+.account-fieldset {
+    padding: 80px 120px;
+    border: 4px solid #719E64;
+    box-shadow: 10px 10px 22px -4px rgba(113, 158, 100, 1);
+    border-radius: 20px;
+}
+
+.account-legend {
+    color: #2B3D26;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.account-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.account-label {
+    padding-bottom: 5px;
+}
+
+.account-label label{
+    color: #2B3D26;
+    font-size: 18px;
+}
+
+.account-input {
+    padding-bottom: 15px;
+}
+
+.account-input input {
+    height: 30px;
+    width: 100%;
+    border: 1px solid #719E64;
+    border-radius: 10px;
+}
+
+.account-btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+
