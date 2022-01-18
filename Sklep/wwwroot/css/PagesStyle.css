@@ -1,4 +1,20 @@
-﻿/* Login and register form style */
+﻿/* ADMINISTRATOR PAGES */
+
+/* ManagmentPanel */
+
+.administrator-mp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+
+/* ACCOUNT PAGES */
+
+/* Login and Register */
+
 .account-form {
     margin: 50px;
     display: flex;
@@ -30,26 +46,24 @@
     padding-bottom: 5px;
 }
 
-.account-label label{
-    color: #2B3D26;
-    font-size: 18px;
-}
+    .account-label label {
+        color: #2B3D26;
+        font-size: 18px;
+    }
 
 .account-input {
     padding-bottom: 15px;
 }
 
-.account-input input {
-    height: 30px;
-    width: 100%;
-    border: 1px solid #719E64;
-    border-radius: 10px;
-}
+    .account-input input {
+        height: 30px;
+        width: 100%;
+        border: 1px solid #719E64;
+        border-radius: 10px;
+    }
 
 .account-btn {
     display: flex;
     justify-content: center;
     padding-top: 5px;
 }
-
-

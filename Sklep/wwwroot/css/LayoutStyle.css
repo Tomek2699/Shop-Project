@@ -37,7 +37,7 @@ footer {
 
 /* Other Style */
 
-h1 {
+.h1-title-main {
     font-size: 40px;
     color: #758971;
     text-shadow: 4px 4px 10px rgba(117, 137, 113, 1);
