@@ -1,0 +1,51 @@
+﻿header {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "left-header right-header";
+}
+
+.left-header {
+    grid-area: left-header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.right-header {
+    grid-area: right-header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.logo a {
+    font-size: 40px;
+    font-weight: bold;
+    color: #7CA070;
+}
+
+.lnav-elements a {
+    font-size: 20px;
+    color: #3D5036
+}
+
+.rnav-elements a {
+    font-size: 20px;
+    color: #5A7351;
+}
+
+.rnav-elements button {
+    border: none;
+    font-size: 20px;
+    color: #5A7351;
+    font-family: 'Times New Roman';
+    cursor: pointer;
+}
+
+.logout-form {
+    display: flex;
+    column-gap: 20px;
+}

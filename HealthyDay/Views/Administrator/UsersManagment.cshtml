@@ -1,0 +1,29 @@
+﻿@model IList<IdentityUser>
+@{
+    ViewData["HealthyDay"] = "Zarządzanie użytkownikami";
+    int id = 1;
+}
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nazwa użytkownika</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@id</td>
+                <td>@item.UserName</td>
+                <td>
+                    <a asp-controller="Administrator" asp-action="EditUser" asp-route-id="@item.Id" class="btn-edit">Edytuj</a>
+                    <a asp-controller="Administrator" asp-action="DeleteUser" asp-route-id="@item.Id" class="btn-delete">Usuń</a>
+                </td>
+            </tr>
+            id++;
+        }
+    </tbody>
+</table>

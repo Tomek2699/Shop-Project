@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["HealthyDay"] = "Panel zarządzania";
+}
+
+<h1 class="h1-title-main">Panel zarządzania</h1>
+<div class="administrator-mp-container">
+    <div>
+        <a class="btn-create">Zarządzanie produktami</a>
+    </div>
+    <div>
+        <a asp-controller="Administrator" asp-action="UsersManagment" class="btn-edit">Zarządzanie użytkownikami</a>
+    </div>
+    <div>
+        <a asp-controller="Administrator" asp-action="RolesManagment" class="btn-edit">Zarządzanie rolami użytkowników</a>
+    </div>
+</div>

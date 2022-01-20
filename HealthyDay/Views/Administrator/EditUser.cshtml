@@ -1,0 +1,23 @@
+﻿@model IdentityUser
+@{
+    ViewData["HealthyDay"] = "Edytowanie użytkownika";
+}
+
+<form asp-controller="Administrator" asp-action="EditUserConfirm" method="post"  class="account-form">
+    <fieldset class="account-fieldset">
+        <legend class="account-legend">Edytowanie użytkownika</legend>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input asp-for="Id" type="hidden" />
+        <div class="account-form-container">
+            <div class="account-label">
+                <label>Login</label>
+            </div>
+            <div class="account-input">
+                <input asp-for="UserName" type="text" />
+            </div>
+            <div class="account-btn">
+                <button class="btn-primary" type="submit">Edytuj</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
