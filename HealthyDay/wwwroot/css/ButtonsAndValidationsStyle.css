@@ -13,6 +13,7 @@
     padding: 10px 24px;
     text-decoration: none;
     text-shadow: 0px -1px 0px #2b665e;
+    margin: 2px;
 }
 
 .btn-primary:hover {
@@ -35,6 +36,7 @@
     padding: 10px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #528009;
+    margin: 2px;
 }
 
 .btn-create:hover {
@@ -57,6 +59,7 @@
     padding: 10px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #528ecc;
+    margin: 2px;
 }
 
 .btn-edit:hover {
@@ -79,6 +82,7 @@
     padding: 10px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #854629;
+    margin: 2px;
 }
 
 .btn-delete:hover {
@@ -101,6 +105,7 @@
     padding: 10px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
+    margin: 2px;
 }
 
 .btn-info:hover {

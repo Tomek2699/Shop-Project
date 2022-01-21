@@ -1,30 +1,35 @@
 ﻿@model IList<IdentityRole>
 @{
     ViewData["HealthyDay"] = "Zarządzanie rolami";
+    int id = 1;
 }
 
 @if (Model.Any())
 {
-    <a asp-controller="Administrator" asp-action="CreateRole" class="btn btn-primary mb-3">Dodaj nową role</a>
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>Nazwa</th>
-                <th></th>
+                <th>
+                    <a asp-controller="Administrator" asp-action="CreateRole" class="btn-primary">Dodaj nową role</a>
+                    <a asp-controller="Administrator" asp-action="ManagmentPanel" class="btn-delete">Anuluj</a>
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in @Model)
             {
                 <tr>
-                    <td>@item.Id</td>
+                    <td>@id</td>
                     <td>@item.Name</td>
                     <td>
-                        <a asp-controller="Administrator" asp-action="EditRole" asp-route-id="@item.Id" class="btn btn-primary">Edytuj</a>
-                        <a asp-controller="Administrator" asp-action="DeleteRole" asp-route-id="@item.Id" class="btn btn-danger">Usuń</a>
+                        <a asp-controller="Administrator" asp-action="UsersInRole" asp-route-id="@item.Id" class="btn-create">Dodaj użytkownika</a>
+                        <a asp-controller="Administrator" asp-action="EditRole" asp-route-id="@item.Id" class="btn-edit">Edytuj</a>
+                        <a asp-controller="Administrator" asp-action="DeleteRole" asp-route-id="@item.Id" class="btn-delete">Usuń</a>
                     </td>
                 </tr>
+                id++;
             }
         </tbody>
     </table>
@@ -32,7 +37,7 @@
 else
 {
     <div>
-        <h2>Nie ma jeszcze utworzonje żadnej roli</h2>
-        <a asp-controller="Administrator" asp-action="CreateRole" class="btn btn-primary">Dodaj nową role</a>
+        <h1 class="h1-title-main">Nie ma jeszcze utworzonje żadnej roli</h1>
+        <a asp-controller="Administrator" asp-action="CreateRole" class="btn-primary">Dodaj nową role</a>
     </div>
 }

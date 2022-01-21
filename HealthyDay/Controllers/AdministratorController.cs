@@ -36,7 +36,7 @@ namespace HealthyDay.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditUserConfirm(IdentityUser user)
+        public async Task<IActionResult> EditUser(IdentityUser user)
         {
             var result = await accountRepository.EditUser(user);
             if(ModelState.IsValid)
@@ -73,6 +73,80 @@ namespace HealthyDay.Controllers
         [HttpGet]
         public IActionResult RolesManagment()
         {
+            return View("./Role/RolesManagment", roleRepository.FindAllRoles());
+        }
+
+        [HttpGet]
+        public IActionResult CreateRole()
+        {
+            return View("./Role/CreateRole");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateRole(RoleModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                var result = await roleRepository.CreateRole(model);
+
+                if(result.Succeeded)
+                {
+                    return View("./Role/RolesManagment", roleRepository.FindAllRoles());
+                }
+
+                foreach(var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+            return View("./Role/CreateRole", model);
+            
+            
+        }
+
+        [HttpGet]
+        public async  Task<IActionResult> UsersInRole(RoleModel model)
+        {
+            return View("./Role/UsersInRole", await roleRepository.Find(model.Id));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UserInRole(string id)
+        {
+            ViewBag.id = id;
+
+            return View("./Role/EditUsersInRole", await roleRepository.FindUsersInRole(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditUsersInRole(IList<UserRoleModel> model, string id)
+        {
+            await roleRepository.EditUsersInRole(model, id);
+            return View("./Role/UsersInRole", await roleRepository.Find(id));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditRole(string id)
+        {
+            return View("./Role/EditRole", await roleRepository.Find(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditRole(RoleModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                await roleRepository.EditRole(model);
+                return View("./Role/RolesManagment", roleRepository.FindAllRoles());
+            }
+
+            return View("./Role/EditRole", await roleRepository.Find(model.Id));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteRole(string id)
+        {
+            await roleRepository.DeleteRole(id);
             return View("./Role/RolesManagment", roleRepository.FindAllRoles());
         }
     }

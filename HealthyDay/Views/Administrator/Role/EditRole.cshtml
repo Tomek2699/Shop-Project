@@ -1,0 +1,23 @@
+﻿@model HealthyDay.Models.Account.Role.RoleModel
+@{     
+    ViewData["HealthyDay"] = "Edycja roli";
+}
+
+<form asp-controller="Administrator" asp-action="EditRole" method="post" class="main-form">
+    <fieldset class="main-fieldset">
+        <legend class="main-legend">Tworzenie nowej roli</legend>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="main-form-container">
+            <div class="main-label">
+                <label>Nazwa roli</label>
+            </div>
+            <div class="main-input">
+                <input asp-for="RoleName" type="text" />
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <div class="main-btn">
+                <button class="btn-primary" type="submit">Edytuj</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -5958,11 +5958,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomas\\Desktop\\Projects\\HealthyDay\\HealthyDay\\HealthyDay.csproj",
+      "projectUniqueName": "C:\\Users\\Tomas\\Desktop\\Projects\\Shop-Project\\HealthyDay\\HealthyDay.csproj",
       "projectName": "HealthyDay",
-      "projectPath": "C:\\Users\\Tomas\\Desktop\\Projects\\HealthyDay\\HealthyDay\\HealthyDay.csproj",
+      "projectPath": "C:\\Users\\Tomas\\Desktop\\Projects\\Shop-Project\\HealthyDay\\HealthyDay.csproj",
       "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomas\\Desktop\\Projects\\HealthyDay\\HealthyDay\\obj\\",
+      "outputPath": "C:\\Users\\Tomas\\Desktop\\Projects\\Shop-Project\\HealthyDay\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",

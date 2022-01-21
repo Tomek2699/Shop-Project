@@ -3,30 +3,30 @@
     ViewData["HealthyDay"] = "Logowanie";
 }
 
-<form asp-controller="Account" asp-action="Login" method="post"  class="account-form">
-    <fieldset class="account-fieldset">
-        <legend class="account-legend">Logowanie</legend>
+<form asp-controller="Account" asp-action="Login" method="post"  class="main-form">
+    <fieldset class="main-fieldset">
+        <legend class="main-legend">Logowanie</legend>
         <div asp-validation-summary="All" class="text-danger"></div>
-        <div class="account-form-container">
-            <div class="account-label">
+        <div class="main-form-container">
+            <div class="main-label">
                 <label>Login</label>
             </div>
-            <div class="account-input">
+            <div class="main-input">
                 <input asp-for="Login" type="text" />
                 <span asp-validation-for="Login" class="text-danger"></span>
             </div>
-            <div class="account-label">
+            <div class="main-label">
                 <label>Hasło</label>
             </div>
-            <div class="account-input">
+            <div class="main-input">
                 <input asp-for="Password" type="password" />
                 <span asp-validation-for="Login" class="text-danger"></span>
             </div>
-            <div class="account-label">
+            <div class="main-label">
                 <label>Zapamiętaj mnie</label>
                 <input asp-for="RememberMe" type="checkbox" />
             </div>
-            <div class="account-btn">
+            <div class="main-btn">
                 <button class="btn-primary" type="submit">Zaloguj</button>
             </div>
         </div>

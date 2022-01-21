@@ -10,9 +10,10 @@ namespace HealthyDay.Models.Account.Role
     {
         Task<IdentityResult> CreateRole(RoleModel model);
         Task<IdentityResult> EditRole(RoleModel model);
+        Task<IdentityResult> DeleteRole(string id);
+        Task<IList<UserRoleModel>> FindUsersInRole(string id);
+        Task EditUsersInRole(IList<UserRoleModel> model, string id);
         Task<RoleModel> Find(string id);
-        Task<IList<UserRoleModel>> FindUser(string id);
-        Task EditUserInRole(IList<UserRoleModel> model, string id);
         IList<IdentityRole> FindAllRoles();
     }
 }

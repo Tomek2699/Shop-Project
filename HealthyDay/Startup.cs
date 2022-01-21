@@ -1,10 +1,12 @@
 using HealthyDay.Models.Account;
 using HealthyDay.Models.Account.Role;
 using HealthyDay.Models.DataBase;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -42,6 +44,15 @@ namespace HealthyDay
             // Transients
             services.AddTransient<IAccountManagerRepository, AccountManagerRepository>();
             services.AddTransient<IRoleManagerRepository, RoleManagerRepository>();
+
+            // Policy
+            services.AddMvc(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                  .RequireAuthenticatedUser()
+                                  .Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
+            }).AddXmlDataContractSerializerFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

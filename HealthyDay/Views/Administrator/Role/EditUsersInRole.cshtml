@@ -1,0 +1,29 @@
+﻿@model IList<HealthyDay.Models.Account.Role.UserRoleModel>
+@{
+    ViewData["HealthyDay"] = "Dodwawanie użytkowników do roli";
+    string id = ViewBag.id;
+}
+
+<form asp-controller="Administrator" asp-action="EditUsersInRole" method="post">
+    <input asp-for="@id" type="hidden" />
+    <div class="card">
+        <div class="card-header">
+            <h1>Dodawanie użytkowników do roli</h1>
+        </div>
+        <div class="card-body">
+            @for(int i = 0; i < Model.Count; i++)
+            {
+                <div class="main-label">
+                    <input asp-for="@Model[i].UserId" type="hidden" />
+                    <input asp-for="@Model[i].UserName" type="hidden" />
+                    <input asp-for="@Model[i].IsSelected" type="checkbox" class="main-checkbox" />
+                    <label>@Model[i].UserName</label>
+                </div>
+            }
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn-primary">Aktualizuj</button>
+            <a asp-controller="Administrator" asp-action="UsersInRole" asp-route-id="@id" class="btn-delete">Anuluj</a>
+        </div>
+    </div>
+</form>

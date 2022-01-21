@@ -3,33 +3,33 @@
     ViewData["HealthyDay"] = "Rejestracja";
 }
 
-<form asp-controller="Account" asp-action="Register" method="post"  class="account-form" >
-    <fieldset class="account-fieldset">
-        <legend class="account-legend">Rejestracja</legend>
+<form asp-controller="Account" asp-action="Register" method="post"  class="main-form" >
+    <fieldset class="main-fieldset">
+        <legend class="main-legend">Rejestracja</legend>
         <div asp-validation-summary="All" class="text-danger"></div>
-        <div class="account-form-container">
+        <div class="main-form-container">
             <div class="account-label">
                 <label>Podaj login</label>
             </div>
-            <div class="account-input">
+            <div class="main-input">
                 <input asp-for="Login" type="text" />
                 <span asp-validation-for="Login" class="text-danger"></span>
             </div>
-            <div class="account-label">
+            <div class="main-label">
                 <label>Podaj hasło</label>
             </div>
-            <div class="account-input">
+            <div class="main-input">
                 <input asp-for="Password" type="password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="account-label">
+            <div class="main-label">
                 <label>Podaj ponownie hasło</label>
             </div>
-            <div class="account-input">
+            <div class="main-input">
                 <input asp-for="ConfirmPassword" type="password" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
-            <div class="account-btn">
+            <div class="main-btn">
                 <button class="btn-primary" type="submit">Zarejestruj</button>
             </div>
         </div>

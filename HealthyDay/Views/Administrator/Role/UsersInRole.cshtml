@@ -1,0 +1,29 @@
+﻿@model HealthyDay.Models.Account.Role.RoleModel
+@{
+    ViewData["HealthyDay"] = "Rola użytkwników";
+    int id = 1;
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1>Użytkownicy</h1>
+    </div>
+    <div class="card-body">
+        @if(Model.Users.Any())
+        {
+            foreach(var user in Model.Users)
+            {
+                <h3>@id. @user</h3>
+                id++;
+            }
+        }
+        else
+        {
+            <h3>Brak użytkowników</h3>
+        }
+    </div>
+    <div class="card-footer">
+        <a asp-controller="Administrator" asp-action="UserInRole" asp-route-id="@Model.Id" class="btn-primary">Dodaj lub usuń użytkownika</a>
+        <a asp-controller="Administrator" asp-action="RolesManagment" class="btn-delete">Anuluj</a>
+    </div>
+</div>

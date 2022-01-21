@@ -23,9 +23,12 @@
             <div class="lnav-elements">
                 <a asp-controller="User" asp-action="Index">Produkty</a>
             </div>
-            <div class="lnav-elements">
-                <a asp-controller="Administrator" asp-action="ManagmentPanel">Panel zarządzania</a>
-            </div>
+            @if(User.IsInRole("Admin"))
+            {
+                <div class="lnav-elements">
+                    <a asp-controller="Administrator" asp-action="ManagmentPanel">Panel zarządzania</a>
+                </div>
+            }
         </div>
         <div class="right-header">
             @if (signInManager.IsSignedIn(User))

@@ -39,6 +39,12 @@ namespace HealthyDay.Models.Account.Role
             return result;
         }
 
+        public async Task<IdentityResult> DeleteRole(string id)
+        {
+            IdentityResult result = await roleManager.DeleteAsync(await roleManager.FindByIdAsync(id));
+            return result;
+        }
+
         public async Task<RoleModel> Find(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
@@ -60,7 +66,7 @@ namespace HealthyDay.Models.Account.Role
             return model;
         }
 
-        public async Task<IList<UserRoleModel>> FindUser(string id)
+        public async Task<IList<UserRoleModel>> FindUsersInRole(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
             var model = new List<UserRoleModel>();
@@ -87,7 +93,7 @@ namespace HealthyDay.Models.Account.Role
             return model;
         }
 
-        public async Task EditUserInRole(IList<UserRoleModel> model, string id)
+        public async Task EditUsersInRole(IList<UserRoleModel> model, string id)
         {
             var role = await roleManager.FindByIdAsync(id);
 
