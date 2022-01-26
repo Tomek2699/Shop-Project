@@ -137,7 +137,6 @@ C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\V
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Administrator\UsersManagment.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\HealthyDay.RazorTargetAssemblyInfo.cache
@@ -152,3 +151,18 @@ C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\V
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Administrator\Role\EditRole.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Administrator\Role\UsersInRole.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Administrator\Role\EditUsersInRole.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\ProductsManagment.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\AddProduct.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\AddProductConfirm.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\EditProduct.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\DetailsProduct.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\User\ProductsList.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\User\DetailsProduct.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\ShopManagment.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\Category\CategoriesManagment.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\Category\AddCategory.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\Category\AddCategoryConfirm.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\Category\DetailsCategory.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\Category\EditCategory.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\ProductsCategoriesManagment.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\User\ShoppingBasket.cshtml.g.cs

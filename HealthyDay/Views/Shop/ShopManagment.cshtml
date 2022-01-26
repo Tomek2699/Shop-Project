@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["HealthyDay"] = "Zarządzanie sklepem";
+}
+
+<h1 class="h1-title-main">Panel zarządzania sklepem</h1>
+<div class="administrator-mp-container">
+    <div>
+        <a asp-controller="Shop" asp-action="ProductsManagment" class="btn-create">Zarządzanie produktami</a>
+    </div>
+    <div>
+        <a asp-controller="Shop" asp-action="CategoriesManagment" class="btn-create">Zarządzanie kategoriami</a>
+    </div>
+    <div>
+        <a asp-controller="Shop" asp-action="ProductsCategoriesManagment" class="btn-create">Dodawanie kategorii do produktów</a>
+    </div>
+    <div>
+        <a asp-controller="Administrator" asp-action="ManagmentPanel" class="btn-delete">Anuluj</a>
+    </div>
+</div>

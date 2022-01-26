@@ -1,0 +1,17 @@
+﻿@model HealthyDay.Models.Shop.Category.CategoryModel
+@{
+    ViewData["HealthyDay"] = "Opis dodanej kategorii";
+}
+
+<div>
+    <h1 class="h1-title-main">Udało Ci się dodać kategorie!</h1>
+    <p><b>Id:</b> @Model.Id</p>
+    <p><b>Nazwa:</b> @Model.Name</p>
+    <hr />
+    <br />
+</div>
+<div>
+    <a asp-controller="Shop" asp-action="CategoriesManagment" class="btn-primary">OK</a>
+    <a asp-controller="Shop" asp-action="EditCategory" asp-route-id="@Model.Id" class="btn-edit">Edytuj</a>
+    <a asp-controller="Shop" asp-action="DeleteCategory" asp-route-id="@Model.Id" class="btn-delete">Usuń</a>
+</div>

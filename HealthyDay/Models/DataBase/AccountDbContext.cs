@@ -9,6 +9,6 @@ namespace HealthyDay.Models.DataBase
 {
     public class AccountDbContext : IdentityDbContext
     {
-        public AccountDbContext(DbContextOptions options) : base(options) { }
+        public AccountDbContext(DbContextOptions<AccountDbContext> options) : base(options) { }
     }
 }

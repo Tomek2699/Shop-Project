@@ -21,7 +21,7 @@
                 <a asp-controller="Home" asp-action="Index">HealthyDay</a>
             </div>
             <div class="lnav-elements">
-                <a asp-controller="User" asp-action="Index">Produkty</a>
+                <a asp-controller="User" asp-action="ProductsList">Produkty</a>
             </div>
             @if(User.IsInRole("Admin"))
             {
@@ -42,6 +42,9 @@
                             <button type="submit">Wyloguj</button>
                         </div>
                     </form>
+                </div>
+                <div class="rnav-icon">
+                    <a asp-controller="User" asp-action="ShoppingBasket"><img src="/Images/green-shopping-basket-icon-48.png" alt="Koszyk" /></a>
                 </div>
             }
             else

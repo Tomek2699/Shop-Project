@@ -1,0 +1,21 @@
+﻿@model HealthyDay.Models.Shop.ProductModel
+@{
+    ViewData["HealthyDay"] = "Opis produktu";
+}
+
+<div>
+    <h1 class="h1-title-main">Opis produktu</h1>
+    <p><b>Id:</b> @Model.Id</p>
+    <p><b>Nazwa:</b> @Model.Name</p>
+    <p><b>Opis:</b> @Model.Description</p>
+    <p><b>Cena:</b> @Model.Price</p>
+    <p><b>Ilość:</b> @Model.Amount</p>
+    <p><b>Data dodania/modyfikacji:</b> @Model.Date</p>
+    <hr />
+    <br />
+</div>
+<div>
+    <a asp-controller="Shop" asp-action="ProductsManagment" class="btn-primary">Anuluj</a>
+    <a asp-controller="Shop" asp-action="EditProduct" asp-route-id="@Model.Id" class="btn-edit">Edytuj</a>
+    <a asp-controller="Shop" asp-action="DeleteProduct" asp-route-id="@Model.Id" class="btn-delete">Usuń</a>
+</div>

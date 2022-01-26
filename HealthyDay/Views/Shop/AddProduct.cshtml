@@ -1,0 +1,45 @@
+﻿@model HealthyDay.Models.Shop.ProductModel
+@{
+    ViewData["HealthyDay"] = "Dodawanie produktu";
+}
+
+<form asp-controller="Shop" asp-action="AddProduct" method="post" class="main-form">
+    <fieldset class="main-fieldset">
+        <legend class="main-legend">Dodaj produkt</legend>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="main-form-container">
+            <div class="main-label">
+                <label>Nazwa</label>
+            </div>
+            <div class="main-input">
+                <input asp-for="Name" type="text" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="main-label">
+                <label>Opis</label>
+            </div>
+            <div class="main-textarea">
+                <textarea asp-for="Description" type="text"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="main-label">
+                <label>Cena</label>
+            </div>
+            <div class="main-input">
+                <input asp-for="Price" type="text" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="main-label">
+                <label>Ilość</label>
+            </div>
+            <div class="main-input">
+                <input asp-for="Amount" type="text" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="main-btn">
+                <button class="btn-primary" type="submit">Dodaj</button>
+                <a asp-controller="Shop" asp-action="ProductsManagment" class="btn-delete">Anuluj</a>
+            </div>
+        </div>
+    </fieldset>
+</form>

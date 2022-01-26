@@ -1,0 +1,72 @@
+﻿@using HealthyDay.Models.Shop
+@using HealthyDay.Models.Shop.Category
+@model HealthyDay.Models.Shop.ProductCategoryModel
+@{
+    ViewData["HealthyDay"] = "Dodawanie kategorii dla produktu";
+
+    var products = ViewData["Products"] as IList<ProductModel>;
+    var categories = ViewData["Categories"] as IList<CategoryModel>;
+}
+@if (products.Any() && categories.Any())
+{
+    <form asp-controller="Shop" asp-action="AddProductToCategory" method="post" class="main-form">
+        <fieldset class="main-fieldset">
+            <legend class="main-legend">Dodaj kategorie dla produktu</legend>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="main-form-container">
+                <div class="main-select">
+                    <select asp-for="ProductId">
+                        @foreach (var item in products)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="main-select">
+                    <select asp-for="CategoryId">
+                        @foreach (var item in categories)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="main-btn">
+                    <button class="btn-primary" type="submit">Dodaj</button>
+                    <a asp-controller="Shop" asp-action="ShopManagment" class="btn-delete">Anuluj</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+}
+else if (products.Any())
+{
+    <div>
+        <h1 class="h1-title-main">Nie ma jeszcze dodanej żadnej kategorii</h1>
+    </div>
+    <div>
+        <a asp-controller="Shop" asp-action="AddCategory" class="btn-primary">Dodaj kategorie</a>
+        <a asp-controller="Shop" asp-action="ShopManagment" class="btn-delete">Anuluj</a>
+    </div>
+}
+else if (categories.Any())
+{
+    <div>
+        <h1 class="h1-title-main">Nie ma jeszcze dodanego żadnego produktu</h1>
+    </div>
+    <div>
+        <a asp-controller="Shop" asp-action="AddProduct" class="btn-primary">Dodaj produkt</a>
+        <a asp-controller="Shop" asp-action="ShopManagment" class="btn-delete">Anuluj</a>
+    </div>
+}
+else
+{
+    <div>
+        <h1 class="h1-title-main">Nie ma jeszcze dodanego żadnego produktu ani kategorii</h1>
+    </div>
+    <div>
+        <a asp-controller="Shop" asp-action="AddProduct" class="btn-primary">Dodaj produkt</a>
+        <a asp-controller="Shop" asp-action="AddCategory" class="btn-create">Dodaj kategorie</a>
+        <a asp-controller="Shop" asp-action="ShopManagment" class="btn-delete">Anuluj</a>
+    </div>
+}
+

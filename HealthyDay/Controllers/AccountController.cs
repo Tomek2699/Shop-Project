@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthyDay.Controllers
 {
+    [AllowAnonymous]
     public class AccountController : Controller
     {
         private readonly IAccountManagerRepository repository;
@@ -19,14 +20,12 @@ namespace HealthyDay.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterModel model)
         {
             if(ModelState.IsValid)
@@ -47,14 +46,12 @@ namespace HealthyDay.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginModel model)
         {
             if(ModelState.IsValid)
@@ -72,10 +69,14 @@ namespace HealthyDay.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await repository.Logout();
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult AccessDenied()
+        {
             return RedirectToAction("Index", "Home");
         }
     }

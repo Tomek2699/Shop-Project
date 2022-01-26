@@ -45,6 +45,10 @@
     cursor: pointer;
 }
 
+.rnav-icon {
+    padding-left: 20px;
+}
+
 .logout-form {
     display: flex;
     column-gap: 20px;

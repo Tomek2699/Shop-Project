@@ -1,6 +1,9 @@
 using HealthyDay.Models.Account;
 using HealthyDay.Models.Account.Role;
 using HealthyDay.Models.DataBase;
+using HealthyDay.Models.Shop;
+using HealthyDay.Models.Shop.Category;
+using HealthyDay.Models.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,9 +44,18 @@ namespace HealthyDay
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AccountDbContext>();
 
+            // Shop Data Base
+            services.AddDbContext<ShopDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("ShopDb"));
+            });
+
             // Transients
             services.AddTransient<IAccountManagerRepository, AccountManagerRepository>();
             services.AddTransient<IRoleManagerRepository, RoleManagerRepository>();
+            services.AddTransient<ICrudProductRepository, CrudProductRepository>();
+            services.AddTransient<ICrudCategoryRepository, CrudCategoryRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
             // Policy
             services.AddMvc(options =>

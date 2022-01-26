@@ -1,0 +1,24 @@
+﻿@model HealthyDay.Models.Shop.Category.CategoryModel
+@{
+    ViewData["HealthyDay"] = "Dodawanie kategorii";
+}
+
+<form asp-controller="Shop" asp-action="AddCategory" method="post" class="main-form">
+    <fieldset class="main-fieldset">
+        <legend class="main-legend">Dodaj kategorie</legend>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="main-form-container">
+            <div class="main-label">
+                <label>Nazwa</label>
+            </div>
+            <div class="main-input">
+                <input asp-for="Name" type="text" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="main-btn">
+                <button class="btn-primary" type="submit">Dodaj</button>
+                <a asp-controller="Shop" asp-action="CategoriesManagment" class="btn-delete">Anuluj</a>
+            </div>
+        </div>
+    </fieldset>
+</form>

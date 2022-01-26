@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using HealthyDay.Models.Account;
 using HealthyDay.Models.Account.Role;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace HealthyDay.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdministratorController : Controller
     {
         private readonly IAccountManagerRepository accountRepository;

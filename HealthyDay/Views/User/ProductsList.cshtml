@@ -1,0 +1,48 @@
+﻿@model IList<HealthyDay.Models.Shop.ProductModel>
+@{
+    ViewData["HealthyDay"] = "Lista produktów";
+    int id = 1;
+}
+
+@if (Model.Any())
+{
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nazwa</th>
+                <th>Opis</th>
+                <th>Cena</th>
+                <th>Ilość</th>
+                <th>
+                    <a asp-controller="Home" asp-action="Index" class="btn-delete">Anuluj</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>@id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td>@item.Amount</td>
+                    <td>
+                        <a asp-controller="User" asp-action="DetailsProduct" asp-route-id="@item.Id" class="btn-info">Szczegóły</a>
+                    </td>
+                </tr>
+                id++;
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div>
+        <h1 class="h1-title-main">Nie ma jeszcze dodanego żadnego produktu</h1>
+    </div>
+    <div>
+        <a asp-controller="Home" asp-action="Index" class="btn-delete">Anuluj</a>
+    </div>
+}
