@@ -22,8 +22,9 @@ namespace HealthyDay.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public IActionResult ProductsList()
+        public IActionResult ProductsList(string id)
         {
+
             return View(userRepository.FindAllProducts());
         }
 

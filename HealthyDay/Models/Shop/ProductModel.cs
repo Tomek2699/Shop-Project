@@ -35,5 +35,6 @@ namespace HealthyDay.Models.Shop
         public DateTime Date { get; set; }
 
         public ICollection<CategoryModel> Categories { get; set; }
+        public ICollection<CartItemModel> CartItemModels { get; set; }
     }
 }

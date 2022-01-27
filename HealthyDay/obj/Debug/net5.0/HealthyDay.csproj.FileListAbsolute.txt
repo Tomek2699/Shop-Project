@@ -166,3 +166,7 @@ C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\V
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\Category\EditCategory.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\Shop\ProductsCategoriesManagment.cshtml.g.cs
 C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\obj\Debug\net5.0\Razor\Views\User\ShoppingBasket.cshtml.g.cs
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\bin\Debug\net5.0\xunit.abstractions.dll
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\bin\Debug\net5.0\xunit.assert.dll
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\bin\Debug\net5.0\xunit.core.dll
+C:\Users\Tomas\Desktop\Projects\Shop-Project\HealthyDay\bin\Debug\net5.0\xunit.execution.dotnet.dll

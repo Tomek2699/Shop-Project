@@ -14,5 +14,6 @@ namespace HealthyDay.Models.DataBase
 
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<CategoryModel> Categories { get; set; }
+        public DbSet<CartItemModel> CartItemModels { get; set; }
     }
 }

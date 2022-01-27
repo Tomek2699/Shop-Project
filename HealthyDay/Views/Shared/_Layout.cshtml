@@ -21,7 +21,7 @@
                 <a asp-controller="Home" asp-action="Index">HealthyDay</a>
             </div>
             <div class="lnav-elements">
-                <a asp-controller="User" asp-action="ProductsList">Produkty</a>
+                <a asp-controller="User" asp-action="ProductsList"asp-route-id="@signInManager.IsSignedIn(User)">Produkty</a>
             </div>
             @if(User.IsInRole("Admin"))
             {

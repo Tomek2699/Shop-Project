@@ -1,5 +1,6 @@
 ﻿using HealthyDay.Models.DataBase;
 using HealthyDay.Models.Shop;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +26,7 @@ namespace HealthyDay.Models.User
         {
             return shopDb.Products.ToList();
         }
+
+
     }
 }
