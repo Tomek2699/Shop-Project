@@ -1,4 +1,4 @@
-## Shop-Project 
+# Shop-Project 
 
 Projekt posiada rejestrację oraz logowanie, aby się zalogować jako admin należy podać:\
 Login: Tomek\
@@ -13,7 +13,7 @@ Jeśli jest się zalogowanym jako admin pokazuje się dostęp do panelu zarządz
 -Zarządzanie użytkownikami w rolach(dodawanie, edytowanie oraz usuwanie użytkowników z określonej roli),\
 -Każdy zarejestrowany użytkownik może dodawać produkty do koszyka oraz je usuwać.
 
-# Aplikacja posiada również Api REST
+### Aplikacja posiada również Api REST
 
 **ApiAdmministrator:**\
 -FindUser(Wyszukuje użytkownika poprzez podanie jego id): ApiAdministrator/FindUser/ -należy podać id użytkownika\
