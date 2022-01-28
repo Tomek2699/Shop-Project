@@ -30,6 +30,7 @@
                     <td>@item.Amount</td>
                     <td>
                         <a asp-controller="User" asp-action="DetailsProduct" asp-route-id="@item.Id" class="btn-info">Szczegóły</a>
+                        <a asp-controller="User" asp-action="AddProductToCart" asp-route-id="@item.Id" class="btn-create">Dodaj</a>
                     </td>
                 </tr>
                 id++;

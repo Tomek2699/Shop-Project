@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace HealthyDay.Models.Shop
 {
-    public class CartItemModel : IdentityUser
+    public class CartItemModel
     {
         [Key]
         public int CartId { get; set; }
-        public string UserId { get; set; }
-        public int Quantity { get; set; }
         public int ProductId { get; set; }
         public ProductModel ProductModel { get; set; }
 

@@ -10,5 +10,9 @@ namespace HealthyDay.Models.User
     {
         ProductModel FindProduct(int id);
         IList<ProductModel> FindAllProducts();
+        CartItemModel AddProductToCart(int id);
+        IList<ProductModel> FindProductInCart();
+        void ClearCart();
+        void DeleteProductFromCart(int id);
     }
 }

@@ -38,7 +38,21 @@ namespace HealthyDay.Controllers
         [HttpGet]
         public IActionResult ShoppingBasket()
         {
-            return View();
+            return View(userRepository.FindProductInCart());
+        }
+
+        [HttpGet]
+        public IActionResult AddProductToCart(int id)
+        {
+            userRepository.AddProductToCart(id);
+            return View("ProductsList", userRepository.FindAllProducts());
+        }
+
+        [HttpGet]
+        public IActionResult DeleteProductFromCart(int id)
+        {
+            userRepository.DeleteProductFromCart(id);
+            return View("ShoppingBasket", userRepository.FindProductInCart());
         }
     }
 }

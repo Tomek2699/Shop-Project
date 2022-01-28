@@ -35,20 +35,15 @@ namespace HealthyDay
         {
             services.AddControllersWithViews();
 
-            // Identity Data Base
-            services.AddDbContext<AccountDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("IdentityDb"));
-            });
-
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<AccountDbContext>();
 
             // Shop Data Base
             services.AddDbContext<ShopDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("ShopDb"));
             });
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ShopDbContext>();
 
             // Transients
             services.AddTransient<IAccountManagerRepository, AccountManagerRepository>();

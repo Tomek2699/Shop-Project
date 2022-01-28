@@ -1,5 +1,52 @@
-﻿@{
+﻿@model IList<HealthyDay.Models.Shop.ProductModel>
+@{
     ViewData["HealthyDay"] = "Koszyk z zakupami";
+    int id = 1;
+    decimal sum = 0;
 }
 
 <h1 class="h1-title-main">Koszyk z zakupami</h1>
+
+@if(Model.Any())
+{ 
+    <table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nazwa</th>
+            <th>Opis</th>
+            <th>Cena</th>
+            <th>
+                <a asp-controller="User" asp-action="ProductsList" class="btn-primary">Dodaj produkt</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price zł</td>
+                <td>
+                    <a asp-controller="User" asp-action="DeleteProductFromCart" asp-route-id="@item.CartId" class="btn-delete">Usuń</a>
+                </td>
+            </tr>            
+            id++;
+            sum += item.Price;
+        }
+    </tbody>
+</table>
+<h2>Suma: @sum zł</h2>
+<a asp-controller="Home" asp-action="Index" class="btn-delete">Anuluj</a>
+}
+else
+{ 
+    <div>
+        <h1 class="h1-title-main">Nie ma jeszcze dodanego żadnego produktu</h1>
+    </div>
+    <div>
+        <a asp-controller="User" asp-action="ProductsList" class="btn-primary">Dodaj produkt do koszyka</a>
+    </div>
+}

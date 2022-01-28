@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HealthyDay.Models.Account;
+using HealthyDay.Models.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,10 +14,12 @@ namespace HealthyDay.Controllers
     public class AccountController : Controller
     {
         private readonly IAccountManagerRepository repository;
+        private readonly IUserRepository userRepository;
 
-        public AccountController(IAccountManagerRepository repository)
+        public AccountController(IAccountManagerRepository repository, IUserRepository userRepository)
         {
             this.repository = repository;
+            this.userRepository = userRepository;
         }
 
         [HttpGet]
@@ -72,6 +75,7 @@ namespace HealthyDay.Controllers
         public async Task<IActionResult> Logout()
         {
             await repository.Logout();
+            userRepository.ClearCart();
             return RedirectToAction("Index", "Home");
         }
 

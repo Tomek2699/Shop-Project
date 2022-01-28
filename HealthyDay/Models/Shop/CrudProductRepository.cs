@@ -1,5 +1,7 @@
 ﻿using HealthyDay.Models.DataBase;
 using HealthyDay.Models.Shop.Category;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +27,6 @@ namespace HealthyDay.Models.Shop
         public ProductModel AddProduct(ProductModel item)
         {
             item.Date = DateTime.Today;
-            IList<CategoryModel> category = item.Categories.ToList();
-
             var product = shopDb.Products.Add(item).Entity;
             shopDb.SaveChanges();
             return product;
