@@ -1,5 +1,6 @@
 # Shop-Project 
-**Aby uruchomić projekt należynwejść w appsettings.json i tam w connection string default zmienić Data Source na Pańską nazwę serwera oraz zrobić "update-database"**\
+**Aby uruchomić projekt należynwejść w appsettings.json i tam w connection string default zmienić Data Source na Pańską nazwę serwera oraz zrobić "update-database"**
+
 Projekt posiada rejestrację oraz logowanie, aby się zalogować jako admin należy podać:\
 Login: Tomek\
 Hasło: Klaudia123!
