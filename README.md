@@ -1,8 +1,8 @@
 # Shop-Project 
 
-Projekt posiada rejestrację oraz logowanie, aby się zalogować jako admin należy podać:
-Login: Tomek 
-Hasło: Klaudia123!
+Projekt posiada rejestrację oraz logowanie, aby się zalogować jako admin należy podać:\
+Login: Tomek\
+Hasło: Klaudia123!\
 
 Jeśli jest się zalogowanym jako admin pokazuje się dostęp do panelu zarządzania, z którego można wykonywać takie akcje jak:
 -Zarządzanie produktami(Dodawanie, edytowanie, usuwanie oraz opis produktu),
