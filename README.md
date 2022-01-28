@@ -1,4 +1,7 @@
-# Shop-Project 
+# Shop-Project
+
+## Projekt na zaliczenie labolatoriów z programowania w ASP .net
+
 **Aby uruchomić projekt należy wejść w appsettings.json i tam w connection string default zmienić Data Source na Pańską nazwę serwera oraz zrobić "update-database"**
 
 Projekt posiada rejestrację oraz logowanie, aby się zalogować jako admin należy podać:\
