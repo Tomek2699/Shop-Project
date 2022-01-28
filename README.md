@@ -1,4 +1,4 @@
-# Shop-Project
+# Shop-Project 
 
 Projekt posiada rejestrację oraz logowanie, aby się zalogować jako admin należy podać:
 Login: Tomek 
